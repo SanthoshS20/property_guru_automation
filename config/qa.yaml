@@ -1,0 +1,4 @@
+base_url: "https://www.propertyguru.com.sg"
+browser: "chrome"
+headless: false
+log_level: "INFO"

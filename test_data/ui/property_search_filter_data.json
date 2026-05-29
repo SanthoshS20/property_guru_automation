@@ -1,0 +1,32 @@
+[
+  {
+    "test_case_id": "TC001",
+    "description": "Condo search with quick filters",
+
+    "search": {
+      "location": "Singapore"
+    },
+
+    "quick_filters": {
+      "bedrooms": "3",
+      "price": {
+        "min": 1000000,
+        "max": 2000000
+      }
+    },
+
+    "more_filters": {
+      "bathrooms": "2",
+      "verified_listing": "Yes"
+    },
+
+    "api_search_query_params": {
+      "_freetextDisplay": "Singapore",
+      "bedrooms": "3",
+      "minPrice": 1000000,
+      "maxPrice": 2000000,
+      "bathrooms": "2",
+      "isVerified": "Yes"
+    }
+  }
+]

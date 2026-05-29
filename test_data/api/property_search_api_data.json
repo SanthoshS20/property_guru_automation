@@ -1,0 +1,84 @@
+[
+  {
+    "test_case_id": "API_001",
+    "description": "Search properties only with search term",
+    "payload": {
+      "_freetextDisplay": "H Residences",
+      "listingType": "sale",
+      "isCommercial": false,
+      "propertyId": 20651
+    }
+  },
+  {
+    "test_case_id": "API_002",
+    "description": "Search properties with only quick filters",
+    "payload": {
+      "listingType": "sale",
+      "isCommercial": false,
+      "propertyTypeGroup": "L",
+      "propertyTypeCode": "SEMI",
+      "bedrooms": 3,
+      "minPrice": 1000000,
+      "maxPrice": 2000000
+    }
+  },
+  {
+    "test_case_id": "API_003",
+    "description": "Search properties with only more filters",
+    "payload": {
+      "tenureCode": "F",
+      "furnishing": "FULL",
+      "listingType": "sale",
+      "isCommercial": false,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "isVerified": true
+    }
+  },
+  {
+    "test_case_id": "API_004",
+    "description": "Search properties with both search term and quick filters",
+    "payload": {
+      "_freetextDisplay": "H Residences",
+      "listingType": "sale",
+      "isCommercial": false,
+      "propertyTypeGroup": "L",
+      "propertyTypeCode": "SEMI",
+      "bedrooms": 3,
+      "minPrice": 1000000,
+      "maxPrice": 2000000
+    }
+  },
+  {
+    "test_case_id": "API_005",
+    "description": "Search properties with both search term and more filters",
+    "payload": {
+      "_freetextDisplay": "H Residences",
+      "tenureCode": "F",
+      "furnishing": "FULL",
+      "listingType": "sale",
+      "isCommercial": false,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "isVerified": true
+    }
+  },
+  {
+    "test_case_id": "API_006",
+    "description": "Search properties with search term, quick filters and more filters",
+    "payload": {
+      "_freetextDisplay": "H Residences",
+      "listingType": "sale",
+      "isCommercial": false,
+      "propertyTypeGroup": "L",
+      "propertyTypeCode": "SEMI",
+      "bedrooms": 3,
+      "minPrice": 1000000,
+      "maxPrice": 2000000,
+      "tenureCode": "F",
+      "furnishing": "FULL",
+      "bathrooms": 2,
+      "isVerified": true
+    }
+  }
+]
