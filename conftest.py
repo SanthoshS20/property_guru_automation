@@ -1,5 +1,6 @@
 import pytest, allure
 from core.driver_manager import DriverManager
+from utils.logger import Logger
 from utils.screenshot_utils import ScreenshotUtils
 from config.config_manager import ConfigManager
 
@@ -23,10 +24,10 @@ def setup_teardown(request):
     driver.quit()
 
 
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope="function")
 def open_home_page(request):
     driver = request.cls.driver
-    driver.get(request.cls.base_url + "/property-for-sale")
+    driver.get(request.cls.base_url + ConfigManager.get("home_page_path"))
     yield
 
 
@@ -37,5 +38,10 @@ def pytest_runtest_makereport(item, call):
     if report.when == "call" and report.failed:
         if hasattr(item.cls, "driver"):
             driver = item.cls.driver
-            screenshot_path = ScreenshotUtils.capture(driver)
-            allure.attach.file(screenshot_path, name="Failure Screenshot", attachment_type=allure.attachment_type.PNG)
+            try:
+                screenshot_path = ScreenshotUtils.capture(driver)
+                allure.attach.file(screenshot_path, name="Failure Screenshot", attachment_type=allure.attachment_type.PNG)
+            except Exception as e:
+                Logger.get_logger(__name__).warning(
+                    "Could not capture screenshot: %s", exc
+                )

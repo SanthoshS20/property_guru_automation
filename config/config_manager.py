@@ -13,4 +13,9 @@ class ConfigManager:
 
     @classmethod
     def get(cls, key):
+        try:
+            if key not in cls._config:
+                return ""
+        except KeyError:
+            raise
         return cls._config[key]

@@ -10,7 +10,7 @@ class APIClient:
             "Content-Type": "application/json"
         })
 
-    def make_api_request(self, method, url, params=None, json=None, data=None, headers=None, files=None, timeout=30):
+    def make_api_request(self,  url, method="GET", params=None, json=None, data=None, headers=None, files=None, timeout=30):
         try:
             response = self.session.request(method=method, url=url, params=params, json=json, data=data, headers=headers,
                                         files=files, timeout=timeout)

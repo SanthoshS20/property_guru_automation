@@ -8,7 +8,7 @@ from validators.property_search_validator import PropertySearchValidator
 
 json_data = JSONReader.read_json_data_from_file(constants.PROPERTY_SEARCH_FILTER_DATA_PATH)
 
-@pytest.mark.usefixtures("setup_teardown")
+@pytest.mark.usefixtures("setup_teardown", "open_home_page")
 class TestSearchFilterProperty:
 
     def setup_method(self, method):

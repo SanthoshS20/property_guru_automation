@@ -1,4 +1,4 @@
-base_url: "https://www.propertyguru.com.sg"
+base_url: "https://www.producthunt.com"
 browser: "chrome"
 headless: false
 log_level: "INFO"
