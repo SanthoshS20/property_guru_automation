@@ -1,4 +1,5 @@
-base_url: "https://www.producthunt.com"
+base_url: "https://www.propertyguru.com.sg"
 browser: "chrome"
 headless: false
 log_level: "INFO"
+home_page_path: "/property-for-sale"
